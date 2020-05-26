@@ -11,7 +11,7 @@ Role Variables
 | Variable                | Required | Default                                       |
 | ----------------------- | -------- | --------------------------------------------- |
 | dhparam_size            | no       | 4096                                          |
-| dhparam_file            | no       | `/etc/ssl/certs/dhparam-{{dhparam_size}}.pem` |
+| dhparam_file            | no       | `/etc/ssl/dhparam-{{dhparam_size}}.pem` |
 | dhparam_update_enabled  | no       | false                                         |
 | dhparam_update_interval | no       | `weekly`                                      |
 | dhparam_entropy_service | no       | false                                         |

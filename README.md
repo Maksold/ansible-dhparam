@@ -9,14 +9,14 @@ To speedup key generate use `dhparam_use_dsaparam`.
 Role Variables
 --------------
 
-| Variable                | Required | Default                                       |
-| ----------------------- | -------- | --------------------------------------------- |
-| dhparam_size            | no       | 4096                                          |
-| dhparam_file            | no       | `/etc/ssl/private/dhparam.pem`                |
-| dhparam_update_enabled  | no       | false                                         |
-| dhparam_update_interval | no       | `weekly`                                      |
-| dhparam_use_dsaparam    | no       | false                                         |   
-| dhparam_entropy_service | no       | false                                         |
+| Variable                | Required | Default                                 |
+| ----------------------- | -------- |-----------------------------------------|
+| dhparam_size            | no       | 4096                                    |
+| dhparam_file            | no       | `/etc/ssl/certs/dhparam.pem`            |
+| dhparam_update_enabled  | no       | false                                   |
+| dhparam_update_interval | no       | `weekly`                                |
+| dhparam_use_dsaparam    | no       | false                                   |   
+| dhparam_entropy_service | no       | false                                   |
 
 Entropy Service
 ---------------

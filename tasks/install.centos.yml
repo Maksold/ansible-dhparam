@@ -1,6 +1,0 @@
----
-
-- name: Ensure openssl is installed.
-  yum:
-    name: "openssl"
-    state: installed

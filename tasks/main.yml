@@ -1,6 +1,6 @@
 ---
 
-- include: install.yml
+- import_tasks: install.yml
 
 - name: Find path to the openssl binary
   command: which openssl
@@ -11,6 +11,7 @@
   set_fact:
     dhparam_openssl_binary: "{{which_openssl_output.stdout_lines[0]}}"
   no_log: true
+  check_mode: no
 
 - include: entropy.yml
   when: dhparam_entropy_service
@@ -22,5 +23,7 @@
   command: "{{dhparam_openssl_binary}} dhparam -dsaparam -out '{{ dhparam_file }}' {{ dhparam_size }}"
   args:
     creates: "{{ dhparam_file }}"
+  when: not ansible_check_mode
 
-- include: cron.yml
+- import_tasks: cron.yml
+  when: not ansible_check_mode

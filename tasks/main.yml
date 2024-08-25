@@ -13,7 +13,7 @@
   no_log: true
   check_mode: no
 
-- include: entropy.yml
+- include_tasks: entropy.yml
   when: dhparam_entropy_service
   tags:
     - setup-entropy
